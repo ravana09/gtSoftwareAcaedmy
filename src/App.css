@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+
+
+
+.title{
+  color: rgb(46, 137, 243);
+  font-size:70px;
+  font-weight: bold;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sub-title{
+  font-size:30px;
+  font-weight:400px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.loginCard{
+  width: 400px;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 3px 3px 3px 1px grey;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.title-comtainer{
+  margin: 400px;
+  padding: 100px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+a:hover{
+  text-decoration:underline;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.anchoer1{
+  text-decoration: none;
+}
+
+
+.anchoer2{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.createBUtton{
+ width: 250px;
+ margin: 0 auto;
+
+}
+
+.nameBox{
+  margin-bottom: 10px;
+}
+ 
+.formControl{
+  margin-bottom: 10px;
+  background-color: #F5F6F7;
+}
+
+.a1{
+  background-color: pink;
+}
+
+.a2{
+  background-color: yellow;
+}
+
+.a3{
+  background-color: orange;
+}
+
+.a4{
+  background-color: aqua;
+}
+
+.a5{
+  background-color: greenyellow;
+}
+
+
+.b1{
+  background-color: pink;
+  color: red;
+  font-size: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .b1{
+    background-color: greenyellow;
+    color: green;
+    font-size: 20px;
+    border: 2px solid black;
+    margin: 30px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (min-width: 900px) {
+  .b1{
+    background-color: lightblue;
+    color: blue;
+    font-size: 20px;
   }
 }
