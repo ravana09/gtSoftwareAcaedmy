@@ -45,6 +45,10 @@ import MouseEvents from "./Components/MouseEvents";
 import MouseColorChange from "./practice/Task/MouseColorChange";
 import MouseEnter from "./practice/Task/events/MouseEnter";
 import MouseUpAndDown from "./practice/Task/events/MouseUpAndDown";
+import Counter from "./practice/Task/Calculator/Counter";
+import BasicCalculator from "./practice/Task/Calculator/Calculator";
+import Notes from "./practice/Task/Calculator/Notes";
+import MonthlyLoan from "./practice/Task/Calculator/MonthlyLoan";
 
 
 
@@ -95,10 +99,14 @@ function App() {
       {/* <SpreadOp /> */}
       {/* <Events /> */}
      {/* <MultiState/> */}
-      <MouseEvents />
+      {/* <MouseEvents /> */}
     {/* <MouseColorChange/>  */}
     {/* <MouseEnter/> */}
     {/* <MouseUpAndDown/> */}
+    {/* <Counter/> */}
+    {/* <BasicCalculator/> */}
+    {/* <Notes/> */}
+    <MonthlyLoan/>
     </>
   );
 }
