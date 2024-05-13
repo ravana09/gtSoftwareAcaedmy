@@ -9,22 +9,19 @@ function UseStateTask() {
   let [result, setResult] = useState();
 
   function higher() {
-    let a=parseInt(value1);
-    let b =parseInt(value2);
-    let c =parseInt(value3);
-    let d =parseInt(value4);
-    
+    let a = parseInt(value1);
+    let b = parseInt(value2);
+    let c = parseInt(value3);
+    let d = parseInt(value4);
 
     if (a > b && a > c && a > d) {
       setResult(`${a} is greater `);
-    } else if ( b > c && b > d) {
+    } else if (b > c && b > d) {
       setResult(`${b} is greater `);
-    } else if ( c > d) {
+    } else if (c > d) {
       setResult(`${c} is greater `);
-    } 
-     
-    else{
-        setResult(`${d} is greater `);
+    } else {
+      setResult(`${d} is greater `);
     }
   }
 
@@ -38,6 +35,9 @@ function UseStateTask() {
 
       <button onClick={higher}>Get Results</button>
       <p style={{ color: "red", fontSize: "larger" }}>{result}</p>
+
+      <br/>
+      <hr/>
     </div>
   );
 }
