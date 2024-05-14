@@ -1,0 +1,13 @@
+.childDiv{
+    width: 400px;
+    background-color: rgb(27, 228, 232);
+    height: 200px;
+    margin: 50px;
+    margin-bottom: 10px;
+    padding: 20px;
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border: 2px solid black;
+    
+
+}

@@ -49,6 +49,12 @@ import Counter from "./practice/Task/Calculator/Counter";
 import BasicCalculator from "./practice/Task/Calculator/Calculator";
 import Notes from "./practice/Task/Calculator/Notes";
 import MonthlyLoan from "./practice/Task/Calculator/MonthlyLoan";
+import SavingCalculate from "./practice/Task/Calculator/SavingCalculate";
+import ParentComp from "./Components/ParentComp";
+import ParentEle from "./practice/ParentEle";
+import TaskPropsChild from "./practice/Task/props/TaskPropsChild";
+import TaskPropsParent from "./practice/Task/props/TaskPropsParent";
+import ChildToParent from "./Components/ChildToParent";
 
 
 
@@ -105,8 +111,14 @@ function App() {
     {/* <MouseUpAndDown/> */}
     {/* <Counter/> */}
     {/* <BasicCalculator/> */}
-    {/* <Notes/> */}
-    <MonthlyLoan/>
+    {/* <Notes/>
+    <MonthlyLoan/> */}
+    {/* <SavingCalculate /> */}
+    {/* <ParentComp n="hello" /> */}
+    {/* <ParentEle/> */}
+    {/* <TaskPropsChild/> */}
+    {/* <TaskPropsParent/> */}
+    <ChildToParent />
     </>
   );
 }
