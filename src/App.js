@@ -55,6 +55,15 @@ import ParentEle from "./practice/ParentEle";
 import TaskPropsChild from "./practice/Task/props/TaskPropsChild";
 import TaskPropsParent from "./practice/Task/props/TaskPropsParent";
 import ChildToParent from "./Components/ChildToParent";
+import ChildButton from "./practice/Task/props/ChildButton";
+import ParentButton from "./practice/Task/props/ParentButton";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Routing from "./Components/Routing";
+import Routers from "./practice/Task/Routers/Routers";
+import Forms from "./Components/Forms";
+import FormTask from "./practice/Task/Form/FormTask";
+
+
 
 
 
@@ -118,7 +127,31 @@ function App() {
     {/* <ParentEle/> */}
     {/* <TaskPropsChild/> */}
     {/* <TaskPropsParent/> */}
-    <ChildToParent />
+    {/* <ChildToParent /> */}
+    {/* <ChildButton/> */}
+    
+    {/* <BrowserRouter>
+    <Routes>
+      <Route path="/parentButton" element={<ParentButton />} />
+      <Route path="/Routing" element={<Routing />} />
+      <Route path="/spreadoperator" element={<SpreadOp />} />
+      <Route path="/ifelse" element={<IfElse />} />
+
+    </Routes>
+    </BrowserRouter> */}
+
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Routers />} />
+      <Route path="/BmiCalculator" element={<BmiCalculator />} />
+      <Route path="/MonthlyEmiCalculator" element={<MonthlyLoan />} />
+      <Route path="/SavingCalculator" element={<SavingCalculate />} />
+      <Route path="/Forms" element={<Forms />} />
+      <Route path="/FormTask" element={<FormTask />} />
+    </Routes>
+    </BrowserRouter>
+   
+    
     </>
   );
 }

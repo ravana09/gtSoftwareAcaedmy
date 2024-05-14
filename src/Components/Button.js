@@ -1,12 +1,12 @@
 import React from 'react'
 
-function Button({name}) {
+function Button({nameTag}) {
     function handleClick(){
         alert("clicked")
     }
   return (
     <div>B
-        <button onClick={handleClick}>{name}</button>
+        <button onClick={handleClick}>{nameTag}</button>
         
     </div>
   )

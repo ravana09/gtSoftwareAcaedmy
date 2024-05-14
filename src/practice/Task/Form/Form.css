@@ -1,0 +1,16 @@
+.FormInput{
+    color: yellowgreen;
+    width: 450px;
+    align-items: center;
+    background-color: rgb(202, 210, 218);
+    
+}
+.Card{
+    width: 500px;
+}
+
+.formRadio{
+    display: flex;
+    justify-content: center;
+    
+}

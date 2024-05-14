@@ -28,7 +28,9 @@ console.log(...spread);
 function sum(...sum){
     console.log()
   return (
-    <div>SpreadOp</div>
+    <div>SpreadOp
+      dgdgfgf
+    </div>
   )
 }
 
