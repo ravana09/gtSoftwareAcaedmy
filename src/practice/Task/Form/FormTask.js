@@ -11,6 +11,10 @@ function FormTask() {
   });
   let [radio, setRadio] = useState();
   let [checkBox, setCheckbox] = useState(false);
+  let [checkboxes, setCheckboxes] = useState({
+    checkBox1: false,
+    checkBox2: false,
+  });
 
   function handleInput(e) {
     setData({ ...data, [e.target.name]: e.target.value });
@@ -20,7 +24,7 @@ function FormTask() {
     e.preventDefault();
     if (data || radio || checkBox === null)
       alert("your data has been submited ");
-    console.log(data, radio, checkBox);
+    console.log(data, radio, checkBox, checkboxes);
   }
 
   function handleRadio(e) {
@@ -31,6 +35,9 @@ function FormTask() {
     setCheckbox(!checkBox);
   }
 
+  function handleCheckboxes(CName) {
+    setCheckboxes({ ...checkboxes, [CName]: !checkboxes[CName] });
+  }
   return (
     <>
       <Row>
@@ -104,6 +111,26 @@ function FormTask() {
                         onChange={handleRadio}
                         checked={radio === "Others"}
                         className="formRadio"
+                      />
+                      <Form.Check
+                        type="Checkbox"
+                        label="Remember Me"
+                        name="checkBox1"
+                        checked={checkboxes.checkBox1}
+                        onChange={() => {
+                          handleCheckboxes("checkBox1");
+                        }}
+                        className="formCheckBox"
+                      />
+                      <Form.Check
+                        type="Checkbox"
+                        label="Remember Me"
+                        name="checkBox2"
+                        checked={checkboxes.checkBox2}
+                        onChange={() => {
+                          handleCheckboxes("checkBox2");
+                        }}
+                        className="formCheckBox"
                       />
                     </Col>
                   </Row>

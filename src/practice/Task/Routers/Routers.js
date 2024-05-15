@@ -19,6 +19,9 @@ function Routers() {
         <Link to="/FormTask">
         <button>Form Task</button>
         </Link>
+        <Link to="/TipCalculator">
+        <button>Tip Calculator</button>
+        </Link>
 
     </div>
   )
