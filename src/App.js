@@ -67,6 +67,11 @@ import FormTask from "./practice/Task/Form/FormTask";
 import TipsCalculator from "./practice/Task/Calculator/TipsCalculator";
 import ObjectExample from "./Components/ObjectExample";
 import NumberObj from "./Components/NumberObj";
+import Tofixed from "./practice/Task/Object/Tofixed";
+import DateObj from "./Components/DateObj";
+import AgeCalculator from "./practice/Task/Object/AgeCalculator";
+import TImeNoon from "./practice/Task/Object/TImeNoon";
+import MathObj from "./Components/MathObj";
 
 function App() {
   return (
@@ -142,6 +147,11 @@ function App() {
           <Route path="/TipCalculator" element={<TipsCalculator />} />
           <Route path="/ObjectExample" element={<ObjectExample />} />
           <Route path="/NumberObj" element={<NumberObj />} />
+          <Route path="/Tofixed" element={<Tofixed />} />
+          <Route path="/DateObj" element={<DateObj />} />
+          <Route path="/AgeCalculator" element={<AgeCalculator />} />
+          <Route path="/TImeNoon" element={<TImeNoon />} />
+          <Route path="/MathObj" element={<MathObj />} />
         </Routes>
       </BrowserRouter>
     </>

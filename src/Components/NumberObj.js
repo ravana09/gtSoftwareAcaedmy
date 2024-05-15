@@ -17,7 +17,7 @@ function NumberObj() {
     console.log(n.valueOf())
     console.log(n.toString())
     console.log(x.toString())
-    console.log(x.valueOf())// method
+    console.log(x.valueOf())// 
 
 
 
