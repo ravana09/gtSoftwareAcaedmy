@@ -72,6 +72,8 @@ import DateObj from "./Components/DateObj";
 import AgeCalculator from "./practice/Task/Object/AgeCalculator";
 import TImeNoon from "./practice/Task/Object/TImeNoon";
 import MathObj from "./Components/MathObj";
+import Dice from "./practice/Task/Object/Dice";
+import ColorObject from "./practice/Task/Object/ColorObject";
 
 function App() {
   return (
@@ -152,6 +154,8 @@ function App() {
           <Route path="/AgeCalculator" element={<AgeCalculator />} />
           <Route path="/TImeNoon" element={<TImeNoon />} />
           <Route path="/MathObj" element={<MathObj />} />
+          <Route path="/Dice" element={<Dice />} />
+          <Route path="/ColorObject" element={<ColorObject />} />
         </Routes>
       </BrowserRouter>
     </>
