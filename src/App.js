@@ -74,6 +74,7 @@ import TImeNoon from "./practice/Task/Object/TImeNoon";
 import MathObj from "./Components/MathObj";
 import Dice from "./practice/Task/Object/Dice";
 import ColorObject from "./practice/Task/Object/ColorObject";
+import StonePaperGame from "./practice/Task/Object/StonePaperGame";
 
 function App() {
   return (
@@ -156,6 +157,7 @@ function App() {
           <Route path="/MathObj" element={<MathObj />} />
           <Route path="/Dice" element={<Dice />} />
           <Route path="/ColorObject" element={<ColorObject />} />
+          <Route path="/StonePaperGame" element={<StonePaperGame />} />
         </Routes>
       </BrowserRouter>
     </>

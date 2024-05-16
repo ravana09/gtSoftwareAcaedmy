@@ -1,19 +1,18 @@
 import React, { useState } from "react";
 
 function ColorObject() {
-  let [result, setResult] = useState();
+  let [result, setResult] = useState("skyBlue");
 
   function ChangeColor() {
     let color1 = Math.floor(Math.random() * 255) + 1;
     let color2 = Math.floor(Math.random() * 255) + 1;
     let color3 = Math.floor(Math.random() * 255) + 1;
-    console.log(color1)
-    console.log(color2)
-    console.log(color3)
+    console.log(color1);
+    console.log(color2);
+    console.log(color3);
 
-
-    let finalColor=`rgb(${color1}, ${color2},${color3})`;
-    console.log(finalColor)
+    let finalColor = `rgb(${color1}, ${color2},${color3})`;
+    console.log(finalColor);
     setResult(finalColor);
   }
 
@@ -21,9 +20,7 @@ function ColorObject() {
     <div>
       <h1>Color Object</h1>
       <button onClick={ChangeColor}>Change Color</button>
-      <div
-        style={{ width: 400, height: 400, backgroundColor:{result} }}
-      ></div>
+      <div style={{ width: 400, height: 400, backgroundColor: result }}></div>
     </div>
   );
 }
