@@ -75,6 +75,11 @@ import MathObj from "./Components/MathObj";
 import Dice from "./practice/Task/Object/Dice";
 import ColorObject from "./practice/Task/Object/ColorObject";
 import StonePaperGame from "./practice/Task/Object/StonePaperGame";
+import StonePaperGameCopy from "./practice/Task/Object/StoneGameCopy";
+import RandomNumGame from "./practice/Task/Object/RandomNumGame";
+import RandomNumGameCopy from "./practice/Task/Object/RandomGameCopy";
+import DescribtionTask from "./practice/Task/Object/DescribtionTask";
+import StringObj from "./Components/StringObj";
 
 function App() {
   return (
@@ -158,6 +163,18 @@ function App() {
           <Route path="/Dice" element={<Dice />} />
           <Route path="/ColorObject" element={<ColorObject />} />
           <Route path="/StonePaperGame" element={<StonePaperGame />} />
+          <Route path="/StonePaperGameCopy" element={<StonePaperGameCopy />} />
+          <Route path="/RandomNumGame" element={<RandomNumGame />} />
+          <Route path="/RandomNumGameCopy" element={<RandomNumGameCopy/>} />
+          <Route path="/DescribtionTask" element={<DescribtionTask/>} />
+          <Route path="/StringObj" element={<StringObj/>} />
+
+
+          
+          
+
+
+
         </Routes>
       </BrowserRouter>
     </>
