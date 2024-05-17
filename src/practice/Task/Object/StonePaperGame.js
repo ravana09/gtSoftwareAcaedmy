@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 
 function StonePaperGameCopy() {
-  
-  let [auto, setAuto] = useState('');
-  let [player, setPlayer] = useState('');
-  let [result, setResult] = useState('');
+  let [auto, setAuto] = useState("");
+  let [player, setPlayer] = useState("");
+  let [result, setResult] = useState("");
 
   function chooseWeapon(name) {
     setPlayer(name);
@@ -27,7 +26,9 @@ function StonePaperGameCopy() {
       GameResult = "Player wins";
     }
     setResult(GameResult);
+   
   }
+  
 
   return (
     <div>
@@ -60,8 +61,6 @@ function StonePaperGameCopy() {
       <h1> Computer: {auto}</h1>
 
       <h2>Result: {result}</h2>
-
-      <h2>Computer</h2>
     </div>
   );
 }
