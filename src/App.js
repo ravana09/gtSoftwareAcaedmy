@@ -85,6 +85,7 @@ import ChecktheLetter from "./practice/Task/StringObj/ChecktheLetter";
 import Replace from "./practice/Task/StringObj/Replace";
 import TitleCase from "./practice/Task/StringObj/TitleCase";
 import ArrayObj from "./Components/ArrayObj";
+import DiceGame from "./practice/Task/Object/games/DiceGame";
 
 function App() {
   return (
@@ -178,6 +179,8 @@ function App() {
           <Route path="/Replace" element={<Replace/>} />
           <Route path="/TitleCase" element={<TitleCase/>} />
           <Route path="/ArrayObj" element={<ArrayObj/>} />
+          <Route path="/DiceGame" element={<DiceGame/>} />
+
           
 
 

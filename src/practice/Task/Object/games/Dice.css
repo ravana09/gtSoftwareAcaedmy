@@ -1,0 +1,35 @@
+.dice-game {
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  margin: 50px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dice-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.dice {
+  width: 100px;
+  height: 100px;
+  margin: 0 10px;
+}
+
+.roll-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.roll-button:hover {
+  background-color: #45a049;
+}
