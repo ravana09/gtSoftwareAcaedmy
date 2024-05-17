@@ -23,6 +23,24 @@ function Routers() {
         <button>Tip Calculator</button>
         </Link>
 
+        <Link to="/StonePaperGame">
+        <button>StonePaperGame</button>
+        </Link>
+
+        <Link to="/Dice">
+        <button>Dice</button>
+        </Link>
+
+        <Link to="/RandomNumGameCopy">
+        <button>RandomNumGameCopy</button>
+        </Link>
+
+        
+
+
+                
+
+
     </div>
   )
 }

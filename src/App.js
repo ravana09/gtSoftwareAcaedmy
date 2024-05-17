@@ -80,6 +80,10 @@ import RandomNumGame from "./practice/Task/Object/RandomNumGame";
 import RandomNumGameCopy from "./practice/Task/Object/RandomGameCopy";
 import DescribtionTask from "./practice/Task/Object/DescribtionTask";
 import StringObj from "./Components/StringObj";
+import StringObjtask from "./practice/Task/StringObj/StringObjtask";
+import ChecktheLetter from "./practice/Task/StringObj/ChecktheLetter";
+import Replace from "./practice/Task/StringObj/Replace";
+import TitleCase from "./practice/Task/StringObj/TitleCase";
 
 function App() {
   return (
@@ -168,6 +172,11 @@ function App() {
           <Route path="/RandomNumGameCopy" element={<RandomNumGameCopy/>} />
           <Route path="/DescribtionTask" element={<DescribtionTask/>} />
           <Route path="/StringObj" element={<StringObj/>} />
+          <Route path="/StringObjtask" element={<StringObjtask/>} />
+          <Route path="/ChecktheLetter" element={<ChecktheLetter/>} />
+          <Route path="/Replace" element={<Replace/>} />
+          <Route path="/TitleCase" element={<TitleCase/>} />
+          
 
 
           
