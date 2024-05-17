@@ -1,18 +1,14 @@
-import React from 'react'
+import React from "react";
 
 function LoopControls() {
-    let i=0
-    while(i<10){
-        
-        if(i==5){
-            continue;
-        }
-        console.log(i);
+  let i = 0;
+  while (i < 10) {
+    if (i == 5) {
+      continue;
     }
-  return (
-    
-    <div>LoopControls</div>
-  )
+    console.log(i);
+  }
+  return <div>LoopControls</div>;
 }
 
-export default LoopControls
+export default LoopControls;

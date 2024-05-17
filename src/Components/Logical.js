@@ -3,7 +3,7 @@ import React from 'react'
 function Logical() {
     let a =10
     let b=20
-
+//condition operator
     console.log(a+=b)
     console.log(a)
     let R = (a>b)?"a is big":"a is small"
