@@ -12,7 +12,7 @@ function HighestNum() {
     // console.log(givenData.sort((a,b) => a-b))
 
     let givenData = data.split(",");
-    givenData = givenData.map((givenData) => parseInt(givenData));
+    givenData = givenData.map((i) => parseInt(i));
     console.log(givenData);
     let final = givenData.sort((a, b) => a - b);
     let indexValue = final.length - 1;

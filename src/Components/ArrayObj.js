@@ -29,8 +29,8 @@ function ArrayObj() {
     console.log(arr.splice(1,2,23,45))
     console.log(arr)
     console.log(arr.splice(1,0,23,45))// starting idex, deletecount, adding elements
-    console.log(arr.every((i) => i>=0))
-    console.log(arr.some((i)=>i>40))
+    console.log(arr.every((i) => i>=0))//like and operator
+    console.log(arr.some((i)=>i>40))//like or operator
     console.log(arr.find((i)=>i>40))
     console.log(arr.findIndex((i)=>i>40))
     arr.forEach((i) =>
@@ -40,8 +40,8 @@ function ArrayObj() {
 
     let x =arr.filter((i) => i>10)
     console.log(x)
-    console.log(arr.reduce((a,b)=>a+b))
-    console.log(arr.reduce((a,b)=>a+b,10))
+    console.log(arr.reduce((a,b)=>a+b)) //sum of operato\ions return single value
+    console.log(arr.reduce((a,b)=>a+b,10)) 
     console.log(arr.reduceRight((a,b)=>a+b))
     console.log(arr.reduceRight((a,b)=>a+b,10))
     arr.map(i => 

@@ -92,6 +92,14 @@ import SumOfDigits from "./practice/test/SumOfDigits";
 import RemoveDuplicate from "./practice/test/RemoveDuplicate";
 import PrimenNumberRange from "./practice/test/PrimenNumberRange";
 import HighestNum from "./practice/Task/ArrayObj/HighestNum";
+import UniqueArray from "./practice/Task/ArrayObj/UniqueArray";
+import CommonInaArray from "./practice/Task/ArrayObj/CommonInaArray";
+import RegularExp from "./Components/RegularExp";
+import EmailValidayion from "./practice/Task/RegulaeExp.js/EmailValidayion";
+import EmailValidation from "./practice/Task/RegulaeExp.js/EmailValidayion";
+import PhoneValidation from "./practice/Task/RegulaeExp.js/PhoneValidation";
+import VowelsCOunt from "./practice/Task/ArrayObj/VowelsCOunt";
+import FormValidation from "./practice/Task/RegulaeExp.js/FormValidation";
 
 function App() {
   return (
@@ -192,7 +200,13 @@ function App() {
           <Route path="/RemoveDuplicate" element={<RemoveDuplicate/>} />
           <Route path="/PrimenNumberRange" element={<PrimenNumberRange/>} />
           <Route path="/HighestNum" element={<HighestNum/>} />
-
+          <Route path="/UniqueArray" element={<UniqueArray/>} />
+          <Route path="/CommonInaArray" element={<CommonInaArray/>} />
+          <Route path="/RegularExp" element={<RegularExp/>} />
+          <Route path="/EmailValidation" element={<EmailValidation/>} />
+          <Route path="/PhoneValidation" element={<PhoneValidation/>} />
+          <Route path="/VowelsCount" element={<VowelsCOunt/>} />
+          <Route path="/FormValidation" element={<FormValidation/>} />
           
 
 
