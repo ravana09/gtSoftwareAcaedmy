@@ -86,6 +86,11 @@ import Replace from "./practice/Task/StringObj/Replace";
 import TitleCase from "./practice/Task/StringObj/TitleCase";
 import ArrayObj from "./Components/ArrayObj";
 import DiceGame from "./practice/Task/Object/games/DiceGame";
+import CountWords from "./practice/test/CountWords";
+import Palindrome from "./practice/test/Palindrome";
+import SumOfDigits from "./practice/test/SumOfDigits";
+import RemoveDuplicate from "./practice/test/RemoveDuplicate";
+import PrimenNumberRange from "./practice/test/PrimenNumberRange";
 
 function App() {
   return (
@@ -180,6 +185,11 @@ function App() {
           <Route path="/TitleCase" element={<TitleCase/>} />
           <Route path="/ArrayObj" element={<ArrayObj/>} />
           <Route path="/DiceGame" element={<DiceGame/>} />
+          <Route path="/CountWords" element={<CountWords/>} />
+          <Route path="/Palindrome" element={<Palindrome/>} />
+          <Route path="/SumOfDigits" element={<SumOfDigits/>} />
+          <Route path="/RemoveDuplicate" element={<RemoveDuplicate/>} />
+          <Route path="/PrimenNumberRange" element={<PrimenNumberRange/>} />
 
           
 
