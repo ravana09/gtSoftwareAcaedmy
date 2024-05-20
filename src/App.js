@@ -91,6 +91,7 @@ import Palindrome from "./practice/test/Palindrome";
 import SumOfDigits from "./practice/test/SumOfDigits";
 import RemoveDuplicate from "./practice/test/RemoveDuplicate";
 import PrimenNumberRange from "./practice/test/PrimenNumberRange";
+import HighestNum from "./practice/Task/ArrayObj/HighestNum";
 
 function App() {
   return (
@@ -190,6 +191,7 @@ function App() {
           <Route path="/SumOfDigits" element={<SumOfDigits/>} />
           <Route path="/RemoveDuplicate" element={<RemoveDuplicate/>} />
           <Route path="/PrimenNumberRange" element={<PrimenNumberRange/>} />
+          <Route path="/HighestNum" element={<HighestNum/>} />
 
           
 
