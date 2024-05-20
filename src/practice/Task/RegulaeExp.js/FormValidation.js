@@ -13,7 +13,7 @@ function FormValidation() {
 
 
   const schema = yup.object().shape({
-    firstName: yup.string(/^[a-zA-Z]$/).required("First Name is required"),
+    firstName: yup.string().matches(/^[a-zA-Z]$/,'Name should be in alphabet letters only').required("First Name is required"),
     SurName: yup.string().required("SurName is required"),
     Email: yup.string().matches(/^[a-zA-Z0-9]{8,}$/,'password must more than 8 chars').required(),
     Age:yup.number().positive('age must be positive values').integer().required(),
