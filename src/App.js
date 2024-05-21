@@ -100,6 +100,12 @@ import EmailValidation from "./practice/Task/RegulaeExp.js/EmailValidayion";
 import PhoneValidation from "./practice/Task/RegulaeExp.js/PhoneValidation";
 import VowelsCOunt from "./practice/Task/ArrayObj/VowelsCOunt";
 import FormValidation from "./practice/Task/RegulaeExp.js/FormValidation";
+import YupAndFormik from "./practice/Task/RegulaeExp.js/yup&formik/YupAndFormik";
+import CharecterIedentification from "./practice/Task/RegulaeExp.js/CharecterIedentification";
+import InputFilter from "./practice/Task/RegulaeExp.js/InputFilter";
+import InputFilterGpt from "./practice/Task/RegulaeExp.js/inputChatgpt";
+import DataParsing from "./practice/Task/RegulaeExp.js/DataParsing";
+import DataParsingGpt from "./practice/Task/RegulaeExp.js/DataParsingGpt";
 
 function App() {
   return (
@@ -207,6 +213,13 @@ function App() {
           <Route path="/PhoneValidation" element={<PhoneValidation/>} />
           <Route path="/VowelsCount" element={<VowelsCOunt/>} />
           <Route path="/FormValidation" element={<FormValidation/>} />
+          <Route path="/YupAndFormik" element={<YupAndFormik/>} />
+          <Route path="/CharecterIedentification" element={<CharecterIedentification/>} />
+          <Route path="/InputFilter" element={<InputFilter/>} />
+          <Route path="/InputFilterGpt" element={<InputFilterGpt/>} />
+          <Route path="/DataParsing" element={<DataParsing/>} />
+          <Route path="/DataParsingGpt" element={<DataParsingGpt/>} />
+          
           
 
 

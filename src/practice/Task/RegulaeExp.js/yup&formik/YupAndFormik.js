@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import * as yup from "yup";
 import { Formik, ErrorMessage } from "formik";
 
-function FormValidation() {
+function YupAndFormik() {
   let [data, setData] = useState({
     firstName: "",
     SurName: "",
@@ -32,7 +32,7 @@ function FormValidation() {
       .required(),
     PhoneNumber: yup
       .string()
-      .matches(/^\d{10}$/,"Enter only 10 digits")
+      .matches(/^\d{10}$/, "Enter only 10 digits")
       .required(),
   });
 
@@ -108,4 +108,4 @@ function FormValidation() {
   );
 }
 
-export default FormValidation;
+export default YupAndFormik;
