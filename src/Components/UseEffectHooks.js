@@ -9,6 +9,9 @@ function UseEffectHooks() {
     },5000);
   });
 
+  useEffect(()=>{
+    console.log("useEffect called");
+  },[state])
   return (
     <div>
       UseEffectHooks

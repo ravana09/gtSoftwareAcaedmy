@@ -107,6 +107,8 @@ import InputFilterGpt from "./practice/Task/RegulaeExp.js/inputChatgpt";
 import DataParsing from "./practice/Task/RegulaeExp.js/DataParsing";
 import DataParsingGpt from "./practice/Task/RegulaeExp.js/DataParsingGpt";
 import UseEffectHooks from "./Components/UseEffectHooks";
+import ApiFetching from "./Components/ApiFetching";
+import ProductApi from "./practice/Task/Api/ProductApi";
 
 function App() {
   return (
@@ -221,6 +223,8 @@ function App() {
           <Route path="/DataParsing" element={<DataParsing/>} />
           <Route path="/DataParsingGpt" element={<DataParsingGpt/>} />
           <Route path="/UseEffectHooks" element={<UseEffectHooks/>} />
+          <Route path="/ApiFetching" element={<ApiFetching/>} />
+          <Route path="/ProductApi" element={<ProductApi/>} />
           
           
 
