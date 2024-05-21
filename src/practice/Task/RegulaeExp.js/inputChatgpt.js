@@ -23,17 +23,17 @@ function InputFilterGpt() {
     }
   }
 
-  function alphabetCheck() {
-    return nonAlphabet.test(data.Alphabet);
-  }
+  // function alphabetCheck() {
+  //   return nonAlphabet.test(data.Alphabet);
+  // }
 
-  function numberCheck() {
-    return number.test(data.Number);
-  }
+  // function numberCheck() {
+  //   return number.test(data.Number);
+  // }
 
-  function specialCheck() {
-    return special.test(data.Special);
-  }
+  // function specialCheck() {
+  //   return special.test(data.Special);
+  // }
 
   return (
     <div>
@@ -59,9 +59,9 @@ function InputFilterGpt() {
         placeholder="Enter special character"
       />
       <div>
-        <p>Alphabet valid: {alphabetCheck() ? "Yes" : "No"}</p>
+        {/* <p>Alphabet valid: {alphabetCheck() ? "Yes" : "No"}</p>
         <p>Number valid: {numberCheck() ? "Yes" : "No"}</p>
-        <p>Special character valid: {specialCheck() ? "Yes" : "No"}</p>
+        <p>Special character valid: {specialCheck() ? "Yes" : "No"}</p> */}
       </div>
     </div>
   );

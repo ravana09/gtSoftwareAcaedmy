@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 
 function DataParsing() {
-  let [data, setData] = useState('');
+  let [data, setData] = useState("");
   let [result, setResult] = useState();
-  let [dateResult,setdateResult]=useState()
- 
+  let [dateResult, setdateResult] = useState();
 
   function checkUrl() {
     // let url =  /https?:\/\/[A-Za-z0-9.-]+\.[A-Za-z]{2,5}(\/[A-Za-z0-9.-]*)*/g;
-    let url =  /https?:\/\/[A-Za-z0-9.-]+/g;
+    let url = /https?:\/\/[A-Za-z0-9.-]+/g;
 
-    let date =  /\b[0-9]{2}-[0-9]{2}-[0-9]{4}\b/g;
-    
+    let date = /\b[0-9]{2}-[0-9]{2}-[0-9]{4}\b/g;
+
+    // let pass=/^(.[A-Z][a-z]*[0-9][@#$%&^*!]){8,12}$/;
+
+    let password = /^ (?=.*[a-z] ?=.*[A-Z] ?=.*[0-9] ?=.*[@#$%&^*!] ){8,12}$/;
 
     let givenData = data;
     let urlGiven = givenData.match(url);
@@ -21,8 +23,8 @@ function DataParsing() {
 
     setResult(urlGiven);
     setdateResult(dateGiven);
-    console.log(result)
-    console.log(dateResult)
+    console.log(result);
+    console.log(dateResult);
   }
   return (
     <div>

@@ -106,6 +106,7 @@ import InputFilter from "./practice/Task/RegulaeExp.js/InputFilter";
 import InputFilterGpt from "./practice/Task/RegulaeExp.js/inputChatgpt";
 import DataParsing from "./practice/Task/RegulaeExp.js/DataParsing";
 import DataParsingGpt from "./practice/Task/RegulaeExp.js/DataParsingGpt";
+import UseEffectHooks from "./Components/UseEffectHooks";
 
 function App() {
   return (
@@ -219,6 +220,7 @@ function App() {
           <Route path="/InputFilterGpt" element={<InputFilterGpt/>} />
           <Route path="/DataParsing" element={<DataParsing/>} />
           <Route path="/DataParsingGpt" element={<DataParsingGpt/>} />
+          <Route path="/UseEffectHooks" element={<UseEffectHooks/>} />
           
           
 
