@@ -119,6 +119,10 @@ import MessgeParent from "./practice/Task/userContext/Message/MessgeParent";
 import Logout from "./practice/Task/userContext/LoginLogout/Logout";
 import Login from "./practice/Task/userContext/LoginLogout/Login";
 import ParentCounter from "./practice/Task/userContext/Counter/ParentCounter";
+import UseReducerHook from "./Components/UseReducerHook";
+import TodoReduce from "./practice/Task/UseReduce/TodoReduce";
+import ReviseTodoReduce from "./practice/Task/UseReduce/ReviseTodoReduce";
+
 
 function App() {
   return (
@@ -245,6 +249,11 @@ function App() {
           <Route path="/MessgeParent" element={<MessgeParent/>} />
           <Route path="/Login" element={<Login/>} />
           <Route path="/ParentCounter" element={<ParentCounter/>} />
+          <Route path="/UseReducerHook" element={<UseReducerHook/>} />
+          <Route path="/TodoReduce" element={<TodoReduce/>} />
+          <Route path="/ReviseTodoReduce" element={<ReviseTodoReduce/>} />
+
+          
           
           
 
