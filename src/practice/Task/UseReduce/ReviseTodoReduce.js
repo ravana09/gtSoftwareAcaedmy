@@ -17,6 +17,7 @@ function reducer(initial, action) {
       return restData;
     default:
       break;
+
   }
 }
 
@@ -71,12 +72,14 @@ function ReviseTodoReduce() {
               {i}
               <button
                 // onclick function
+
                 onClick={() => {
                   handleDelete(id);
                 }}
                 //style
                 style={{
                   width: 150,
+                
                   height: 50,
                   backgroundColor: "red",
                   color: "white",
