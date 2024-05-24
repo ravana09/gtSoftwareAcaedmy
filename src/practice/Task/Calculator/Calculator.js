@@ -1,44 +1,220 @@
 import React, { useState } from "react";
-import { Form } from "react-bootstrap";
+import { Button, Card, Col, Container, Form, Row } from "react-bootstrap";
+import "./Calculator.css";
 
 function BasicCalculator() {
-  let [data1, setData1] = useState();
-  let [data2, setData2] = useState();
-  let [result, setResult] = useState();
-  let [operation, setOperation] = useState();
+  let [data, setData] = useState("");
 
-  function Calculator() {}
+  let [result, setResult] = useState("");
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  function handleButtonClick(value) {
+    setData(data + value);
+    console.log(data + value);
+
   }
 
-  
-  return (
-    <div>
-      <Form onSubmit={handleSubmit}>
-        <input type="text" onChange={(e) => setData1(e.target.value)} />
-        <input type="text" onChange={(e) => setData1(e.target.value)} />
-        <input type="text" onChange={(e) => setData1(e.target.value)} />
+  function handleSubmit() {
+    
+   let r= calculation();
+    setData(r)
+  }
 
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>0</button>
-        <button>+</button>
-        <button>-</button>
-        <button>/</button>
-        <button>*</button>
-        <button type="submit">=</button>
-        <h1>Result:{result}</h1>
-      </Form>
+  function calculation() {
+    let givenData = data.split(" ");
+
+    let Number1 = parseInt(givenData[0]);
+
+    for (let i = 1; i <= givenData.length; i++) {
+      let sign = givenData[i];
+      let Number2 = parseInt(givenData[i + 1]);
+     
+
+      switch (sign) {
+        case "+":
+          Number1 += Number2;
+          break;
+        case "-":
+          Number1 -= Number2;
+          break;
+        case "*":
+          Number1 *= Number2;
+          break;
+        case "/":
+          Number1 /= Number2;
+          break;
+        default:
+          break;
+      }
+    }
+    setResult(Number1);
+    return Number1
+    
+  }
+
+
+  return (
+    <>
+     <div className="body">
+      <Row className="Row justify-content-center" style={{ margin: "20px 0" }}>
+        <Col xs={12} md={8} lg={6}>
+          <Card className="p-3">
+            <Container>
+              <div>
+                <div className="mb-4">
+                  <Form.Control
+                    type="text"
+                    className="input"
+                    placeholder="Enter to calculate"
+                    value={data}
+                    onChange={(e) => setData(e.target.value)}
+                  />
+                </div>
+                <div className="mb-3">
+                  <Row>
+                    <Col xs={3}>
+                      <Button
+                        variant="secondary"
+                        onClick={() => handleButtonClick("7")}
+                      >
+                        7
+                      </Button>
+                    </Col>
+                    <Col xs={3}>
+                      <Button
+                        variant="secondary"
+                        onClick={() => handleButtonClick("8")}
+                      >
+                        8
+                      </Button>
+                    </Col>
+                    <Col xs={3}>
+                      <Button
+                        variant="secondary"
+                        onClick={() => handleButtonClick("9")}
+                      >
+                        9
+                      </Button>
+                    </Col>
+                    <Col xs={3}>
+                      <Button
+                        variant="secondary"
+                        onClick={() => handleButtonClick(" * ")}
+                      >
+                        *
+                      </Button>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col xs={3}>
+                      <Button
+                        variant="secondary"
+                        onClick={() => handleButtonClick("4")}
+                      >
+                        4
+                      </Button>
+                    </Col>
+                    <Col xs={3}>
+                      <Button
+                        variant="secondary"
+                        onClick={() => handleButtonClick("5")}
+                      >
+                        5
+                      </Button>
+                    </Col>
+                    <Col xs={3}>
+                      <Button
+                        variant="secondary"
+                        onClick={() => handleButtonClick("6")}
+                      >
+                        6
+                      </Button>
+                    </Col>
+                    <Col xs={3}>
+                      <Button
+                        variant="secondary"
+                        onClick={() => handleButtonClick(" / ")}
+                      >
+                        /
+                      </Button>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col xs={3}>
+                      <Button
+                        variant="secondary"
+                        onClick={() => handleButtonClick("1")}
+                      >
+                        1
+                      </Button>
+                    </Col>
+                    <Col xs={3}>
+                      <Button
+                        variant="secondary"
+                        onClick={() => handleButtonClick("2")}
+                      >
+                        2
+                      </Button>
+                    </Col>
+                    <Col xs={3}>
+                      <Button
+                        variant="secondary"
+                        onClick={() => handleButtonClick("3")}
+                      >
+                        3
+                      </Button>
+                    </Col>
+                    <Col xs={3}>
+                      <Button
+                        variant="secondary"
+                        onClick={() => handleButtonClick(" - ")}
+                      >
+                        -
+                      </Button>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col xs={3}>
+                      <Button
+                        variant="secondary"
+                        onClick={() => handleButtonClick("0")}
+                      >
+                        0
+                      </Button>
+                    </Col>
+                    <Col xs={3}>
+                      <Button
+                        variant="secondary"
+                        onClick={() => handleButtonClick(".")}
+                      >
+                        .
+                      </Button>
+                    </Col>
+                    <Col xs={3}>
+                      <Button
+                        variant="secondary"
+                        onClick={() => handleButtonClick(" + ")}
+                      >
+                        +
+                      </Button>
+                    </Col>
+                    <Col xs={3}>
+                      <Button
+                        variant="success"
+                        onClick={handleSubmit}
+                      >
+                        =
+                      </Button>
+                    </Col>
+                  </Row>
+                </div>
+                
+              </div>
+            </Container>
+          </Card>
+        </Col>
+      </Row>
     </div>
+    </>
   );
 }
 

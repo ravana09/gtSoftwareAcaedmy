@@ -17,7 +17,7 @@ function ArrayObj() {
     console.log(arr.unshift(23))
     console.log(arr)
     console.log(arr.reverse())
-    console.log(arr.sort())
+    console.log(arr.sort((a,b)=>a-b))
     console.log(b.sort())
     console.log(b.sort())
     console.log(arr)

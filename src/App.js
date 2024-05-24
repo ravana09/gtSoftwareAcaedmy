@@ -109,6 +109,16 @@ import DataParsingGpt from "./practice/Task/RegulaeExp.js/DataParsingGpt";
 import UseEffectHooks from "./Components/UseEffectHooks";
 import ApiFetching from "./Components/ApiFetching";
 import ProductApi from "./practice/Task/Api/ProductApi";
+import UseEffectReturn from "./Components/UseEffectReturn";
+import DateTimer from "./practice/Task/Api/DateTimer";
+import MulitStateApi from "./practice/Task/Api/MulitStateApi";
+import UseContextHook from "./Components/UseContextHook";
+import UserContextParent from "./practice/Task/userContext/UserContextParent";
+import ColorParent from "./practice/Task/userContext/ColorChange/ColorParent";
+import MessgeParent from "./practice/Task/userContext/Message/MessgeParent";
+import Logout from "./practice/Task/userContext/LoginLogout/Logout";
+import Login from "./practice/Task/userContext/LoginLogout/Login";
+import ParentCounter from "./practice/Task/userContext/Counter/ParentCounter";
 
 function App() {
   return (
@@ -225,6 +235,16 @@ function App() {
           <Route path="/UseEffectHooks" element={<UseEffectHooks/>} />
           <Route path="/ApiFetching" element={<ApiFetching/>} />
           <Route path="/ProductApi" element={<ProductApi/>} />
+          <Route path="/UseEffectReturn" element={<UseEffectReturn/>} />
+          <Route path="/DateTimer" element={<DateTimer/>} />
+          <Route path="/MulitStateApi" element={<MulitStateApi/>} />
+          <Route path="/BasicCalculator" element={<BasicCalculator/>} />
+          <Route path="/UseContextHook" element={<UseContextHook/>} />
+          <Route path="/UserContextParent" element={<UserContextParent/>} />
+          <Route path="/ColorParent" element={<ColorParent/>} />
+          <Route path="/MessgeParent" element={<MessgeParent/>} />
+          <Route path="/Login" element={<Login/>} />
+          <Route path="/ParentCounter" element={<ParentCounter/>} />
           
           
 
