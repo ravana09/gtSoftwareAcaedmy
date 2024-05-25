@@ -39,6 +39,11 @@ function Routers() {
         <button>RandomNumGameCopy</button>
         </Link>
 
+        <Link to="/DateTimer">
+        <button>Date Timer</button>
+        </Link>
+
+
         
 
 

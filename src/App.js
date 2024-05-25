@@ -122,6 +122,7 @@ import ParentCounter from "./practice/Task/userContext/Counter/ParentCounter";
 import UseReducerHook from "./Components/UseReducerHook";
 import TodoReduce from "./practice/Task/UseReduce/TodoReduce";
 import ReviseTodoReduce from "./practice/Task/UseReduce/ReviseTodoReduce";
+import Cart from "./practice/Task/UseReduce/ShoppingCart/Cart";
 
 
 function App() {
@@ -252,6 +253,7 @@ function App() {
           <Route path="/UseReducerHook" element={<UseReducerHook/>} />
           <Route path="/TodoReduce" element={<TodoReduce/>} />
           <Route path="/ReviseTodoReduce" element={<ReviseTodoReduce/>} />
+          <Route path="/Cart" element={<Cart/>} />
 
           
           

@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import { themeContext } from "./ColorParent";
 
+
+
 function ColorChild() {
   let {theme,changeTheme} = useContext(themeContext);
   let [themecolor,setThemecolor] = useState(false)
