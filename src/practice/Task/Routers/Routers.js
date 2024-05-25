@@ -23,6 +23,10 @@ function Routers() {
         <button>Tip Calculator</button>
         </Link>
 
+        <Link to="/BasicCalculator">
+        <button>Calculator</button>
+        </Link>
+
         <Link to="/StonePaperGame">
         <button>StonePaperGame</button>
         </Link>

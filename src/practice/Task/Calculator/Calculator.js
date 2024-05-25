@@ -74,6 +74,7 @@ function BasicCalculator() {
                     <Col xs={3}>
                       <Button
                         variant="secondary"
+                        className="button"
                         onClick={() => handleButtonClick("7")}
                       >
                         7
@@ -82,6 +83,7 @@ function BasicCalculator() {
                     <Col xs={3}>
                       <Button
                         variant="secondary"
+                        className="button"
                         onClick={() => handleButtonClick("8")}
                       >
                         8
@@ -90,6 +92,7 @@ function BasicCalculator() {
                     <Col xs={3}>
                       <Button
                         variant="secondary"
+                        className="button"
                         onClick={() => handleButtonClick("9")}
                       >
                         9
@@ -98,6 +101,7 @@ function BasicCalculator() {
                     <Col xs={3}>
                       <Button
                         variant="secondary"
+                        className="button"
                         onClick={() => handleButtonClick(" * ")}
                       >
                         *
@@ -108,6 +112,7 @@ function BasicCalculator() {
                     <Col xs={3}>
                       <Button
                         variant="secondary"
+                        className="button"
                         onClick={() => handleButtonClick("4")}
                       >
                         4
@@ -116,6 +121,7 @@ function BasicCalculator() {
                     <Col xs={3}>
                       <Button
                         variant="secondary"
+                        className="button"
                         onClick={() => handleButtonClick("5")}
                       >
                         5
@@ -124,6 +130,7 @@ function BasicCalculator() {
                     <Col xs={3}>
                       <Button
                         variant="secondary"
+                        className="button"
                         onClick={() => handleButtonClick("6")}
                       >
                         6
@@ -132,6 +139,7 @@ function BasicCalculator() {
                     <Col xs={3}>
                       <Button
                         variant="secondary"
+                        className="button"
                         onClick={() => handleButtonClick(" / ")}
                       >
                         /
@@ -142,6 +150,7 @@ function BasicCalculator() {
                     <Col xs={3}>
                       <Button
                         variant="secondary"
+                        className="button"
                         onClick={() => handleButtonClick("1")}
                       >
                         1
@@ -150,6 +159,7 @@ function BasicCalculator() {
                     <Col xs={3}>
                       <Button
                         variant="secondary"
+                        className="button"
                         onClick={() => handleButtonClick("2")}
                       >
                         2
@@ -158,6 +168,7 @@ function BasicCalculator() {
                     <Col xs={3}>
                       <Button
                         variant="secondary"
+                        className="button"
                         onClick={() => handleButtonClick("3")}
                       >
                         3
@@ -166,6 +177,7 @@ function BasicCalculator() {
                     <Col xs={3}>
                       <Button
                         variant="secondary"
+                        className="button"
                         onClick={() => handleButtonClick(" - ")}
                       >
                         -
@@ -176,6 +188,7 @@ function BasicCalculator() {
                     <Col xs={3}>
                       <Button
                         variant="secondary"
+                        className="button"
                         onClick={() => handleButtonClick("0")}
                       >
                         0
@@ -184,6 +197,7 @@ function BasicCalculator() {
                     <Col xs={3}>
                       <Button
                         variant="secondary"
+                        className="button"
                         onClick={() => handleButtonClick(".")}
                       >
                         .
@@ -192,6 +206,7 @@ function BasicCalculator() {
                     <Col xs={3}>
                       <Button
                         variant="secondary"
+                        className="button"
                         onClick={() => handleButtonClick(" + ")}
                       >
                         +
@@ -199,7 +214,9 @@ function BasicCalculator() {
                     </Col>
                     <Col xs={3}>
                       <Button
+                       className="button" 
                         variant="success"
+                       
                         onClick={handleSubmit}
                       >
                         =
