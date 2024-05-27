@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { shoppingContext } from "./Cart";
+import Swal from "sweetalert2";
 
 function Shopping() {
   let {  dispatch } = useContext(shoppingContext);
@@ -30,6 +31,7 @@ function Shopping() {
     // console.log(data)
 
     dispatch({ type: "add", text:data});
+    // Swal.fire("SweetAlert2 is working!");
   }
 
   return (

@@ -123,6 +123,9 @@ import UseReducerHook from "./Components/UseReducerHook";
 import TodoReduce from "./practice/Task/UseReduce/TodoReduce";
 import ReviseTodoReduce from "./practice/Task/UseReduce/ReviseTodoReduce";
 import Cart from "./practice/Task/UseReduce/ShoppingCart/Cart";
+import SweetAlertExample from "./Components/SweetAlertExample";
+import CookiesExample from "./Components/Cookies";
+import CookiesButton from "./practice/Task/Cookies/CookiesButton";
 
 
 function App() {
@@ -254,6 +257,9 @@ function App() {
           <Route path="/TodoReduce" element={<TodoReduce/>} />
           <Route path="/ReviseTodoReduce" element={<ReviseTodoReduce/>} />
           <Route path="/Cart" element={<Cart/>} />
+          <Route path="/SweetAlertExample" element={<SweetAlertExample/>} />
+          <Route path="/CookiesExample" element={<CookiesExample/>} />
+          <Route path="/CookiesButton" element={<CookiesButton/>} />
 
           
           

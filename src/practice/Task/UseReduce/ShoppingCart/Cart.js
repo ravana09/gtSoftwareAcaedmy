@@ -1,21 +1,40 @@
 import React, { createContext, useReducer } from "react";
 import Shopping from "./Shopping";
 import Shopping2 from "./Shopping2";
+import Swal from "sweetalert2";
 
 export let shoppingContext = createContext();
 
 function reducer(state, action) {
   switch (action.type) {
     case "add":
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 1000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        }
+      });
+      Toast.fire({
+        icon: "success",
+        title: "Added successfully"
+      });
+
       return {
         // id:uuid(),
         count: state.count + 1,
         text: [...state.text, action.text],
         totalPrice: state.totalPrice + action.text.price,
+        
+
       };
 
     case "remove":
-      
+
       const updatedText = state.text.filter((_, id) => id !== action.id);
 
       const DeletedText = state.text.filter((_, id) => id === action.id);
