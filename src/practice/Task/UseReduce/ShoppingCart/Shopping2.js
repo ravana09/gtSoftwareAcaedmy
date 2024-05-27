@@ -1,44 +1,40 @@
 import React, { useContext } from "react";
 import { shoppingContext } from "./Cart";
 
-function Shopping() {
+function Shopping2() {
   let { setReceive, dispatch } = useContext(shoppingContext);
 
   let product = [
     {
-      name: "T-shirt",
+      name: "shirt ",
       price: 1500,
     },
 
     {
-      name: "Sweat Shirt",
+      name: "Half hand ",
       price: 2000,
     },
 
     {
-      name: "Hoodie ",
+      name: "Pant ",
       price: 2500,
     },
   ];
-  
-
 
   function AddProduct(index) {
- 
     let data = { ...product[index], id: new Date().getTime() };
-    setReceive( data )
+    setReceive(data);
     // console.log(data)
 
-    dispatch({ type: "add", text:data});
+    dispatch({ type: "add", text: data });
   }
 
   return (
     <div>
-      <h1>Products</h1>
+      <h1>Products 2</h1>
       <ul>
         {product.map((i, id) => (
           <li key={id}>
-            
             {i.name}
 
             {i.price}
@@ -57,4 +53,4 @@ function Shopping() {
   );
 }
 
-export default Shopping;
+export default Shopping2;
