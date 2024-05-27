@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { shoppingContext } from "./Cart";
 
 function Shopping() {
-  let { setReceive, dispatch } = useContext(shoppingContext);
+  let {  dispatch } = useContext(shoppingContext);
 
   let product = [
     {
@@ -26,7 +26,7 @@ function Shopping() {
   function AddProduct(index) {
  
     let data = { ...product[index], id: new Date().getTime() };
-    setReceive( data )
+    // setReceive( data )
     // console.log(data)
 
     dispatch({ type: "add", text:data});

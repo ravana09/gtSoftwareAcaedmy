@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, useState } from "react";
+import React, { createContext, useReducer } from "react";
 import Shopping from "./Shopping";
 import Shopping2 from "./Shopping2";
 
@@ -7,13 +7,15 @@ export let shoppingContext = createContext();
 function reducer(state, action) {
   switch (action.type) {
     case "add":
-      return { 
+      return {
         // id:uuid(),
         count: state.count + 1,
         text: [...state.text, action.text],
         totalPrice: state.totalPrice + action.text.price,
       };
+
     case "remove":
+      
       const updatedText = state.text.filter((_, id) => id !== action.id);
 
       const DeletedText = state.text.filter((_, id) => id === action.id);
@@ -30,7 +32,7 @@ function reducer(state, action) {
 }
 
 function Cart() {
-  let [receive, setReceive] = useState([]);
+  // let [receive, setReceive] = useState([]);
 
   const [state, dispatch] = useReducer(reducer, {
     count: 0,
@@ -44,7 +46,7 @@ function Cart() {
   }
 
   return (
-    <shoppingContext.Provider value={{ setReceive, dispatch }}>
+    <shoppingContext.Provider value={{ dispatch }}>
       <div>Cart</div>
       <li>
         {" "}

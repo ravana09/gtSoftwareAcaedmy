@@ -3,7 +3,7 @@ import React from 'react'
 function ArrayObj() {
     let arr = [3,5,7,8,2]
     let b=[23,45,67]
-    console.log(arr.length)
+    console.log(arr.length)// property
     console.log(arr.at(3))
     console.log(arr.at(-1))
     console.log(arr.concat(b))
