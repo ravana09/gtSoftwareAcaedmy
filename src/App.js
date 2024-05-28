@@ -126,6 +126,9 @@ import Cart from "./practice/Task/UseReduce/ShoppingCart/Cart";
 import SweetAlertExample from "./Components/SweetAlertExample";
 import CookiesExample from "./Components/Cookies";
 import CookiesButton from "./practice/Task/Cookies/CookiesButton";
+import SingleStateCookie from "./practice/Task/Cookies/SingleStateCookie";
+import Erroehandling from "./Components/Erroehandling";
+import TryCatchTask from "./practice/Task/Error/TryCatchTask";
 
 
 function App() {
@@ -260,6 +263,9 @@ function App() {
           <Route path="/SweetAlertExample" element={<SweetAlertExample/>} />
           <Route path="/CookiesExample" element={<CookiesExample/>} />
           <Route path="/CookiesButton" element={<CookiesButton/>} />
+          <Route path="/SingleStateCookie" element={<SingleStateCookie/>} />
+          <Route path="/Errorhandling" element={<Erroehandling/>} />
+          <Route path="/TryCatchTask" element={<TryCatchTask/>} />
 
           
           
