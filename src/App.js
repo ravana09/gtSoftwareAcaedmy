@@ -131,6 +131,7 @@ import Erroehandling from "./Components/Erroehandling";
 import TryCatchTask from "./practice/Task/Error/TryCatchTask";
 import DataTableExample from "./Components/DataTableExample";
 import DataTableTask from "./practice/Task/DataTable/DataTableTask";
+import SwalData from "./practice/Task/DataTable/SwalData";
 
 
 function App() {
@@ -270,6 +271,9 @@ function App() {
           <Route path="/TryCatchTask" element={<TryCatchTask/>} />
           
           <Route path="/DataTableTask" element={<DataTableTask/>} />
+               
+          <Route path="/SwalData" element={<SwalData/>} />
+         
 
           
           

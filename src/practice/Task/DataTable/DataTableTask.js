@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import DataTable from "react-data-table-component";
-import { Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import Swal from "sweetalert2";
 
 function DataTableTask() {
@@ -26,33 +26,99 @@ function DataTableTask() {
         });
       throw new Error("cannot display the details");
     } catch (err) {
-      console.log(err);
+      console.log(err.message);
     }
-  }, [datas]);
+  }, []);
 
-  const column = [
-    {
-      name: "categoryId",
-      selector: (row) => row.categoryId,
-      sortable: true,
+  const customStyles = {
+    rows: {
+      style: {
+        minHeight: "72px", // override the row height
+      },
     },
-    {
-      name: "category",
-      selector: (row) => row.category,
-      sortable: true,
+    headCells: {
+      style: {
+        paddingLeft: "8px", // override the cell padding for head cells
+        paddingRight: "8px",
+      },
     },
-    {
-      name: "description",
-      selector: (row) => row.description,
-      sortable: true,
+    cells: {
+      style: {
+        paddingLeft: "8px", // override the cell padding for data cells
+        paddingRight: "8px",
+        minHeight: "30px",
+        fontSize: "20px",
+      },
     },
-    {
-        name: "Action",
-        selector:row=><div ><i class="bi bi-trash3-fill" ></i> <i class="bi bi-file-earmark-plus-fill">Update</i></div>
+  };
 
-    }
-  ];
+  //delete
 
+  function handleDelete(id) {
+    console.log(id);
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: "btn btn-success",
+        cancelButton: "btn btn-danger",
+      },
+      buttonsStyling: false,
+    });
+    swalWithBootstrapButtons
+      .fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes, delete it!",
+        cancelButtonText: "No, cancel!",
+        reverseButtons: true,
+      })
+      .then((result) => {
+        if (result.isConfirmed) {
+          const { value: text } = Swal.fire({
+            input: "textarea",
+            inputLabel: "Message",
+            inputPlaceholder: "Type your message here...",
+            inputAttributes: {
+              "aria-label": "Type your message here",
+            },
+            showCancelButton: true,
+          });
+          let deletedItems = {
+            categoryId: id,
+            removedRemarks: text,
+          };
+
+          console.log(deletedItems)
+          try {
+
+            
+            axios.post(
+              'http://catodotest.elevadosoftwares.com/Category/RemoveCategory',
+              deletedItems
+            )
+            throw new Error("it is not deleted ");
+          } catch (err) {
+            console.log(err);
+          }
+
+          if (text) {
+            Swal.fire(text);
+          }
+        } else if (
+          /* Read more about handling dismissals below */
+          result.dismiss === Swal.DismissReason.cancel
+        ) {
+          swalWithBootstrapButtons.fire({
+            title: "Cancelled",
+            text: "Your file has been not Deleted",
+            icon: "error",
+          });
+        }
+      });
+  }
+//added
+  
   let addedata = {
     categoryId: 0,
     category: formdata.category,
@@ -96,31 +162,53 @@ function DataTableTask() {
         });
       }
     });
-
-    const customStyles = {
-        rows: {
-            style: {
-                minHeight: '72px', // override the row height
-            },
-        },
-        headCells: {
-            style: {
-                paddingLeft: '8px', // override the cell padding for head cells
-                paddingRight: '8px',
-                color:'green',
-                backgroundColor:'black'
-            },
-        },
-        cells: {
-            style: {
-                paddingLeft: '8px', // override the cell padding for data cells
-                paddingRight: '8px',
-            },
-        },
-    };
-
-
   }
+
+  const column = [
+    {
+      name: "categoryId",
+      selector: (row) => row.categoryId,
+      sortable: true,
+    },
+    {
+      name: "category",
+      selector: (row) => row.category,
+      sortable: true,
+    },
+    {
+      name: "description",
+      selector: (row) => row.description,
+      sortable: true,
+    },
+    {
+      name: "Action",
+      selector: (row) => (
+        <div>
+          <Button
+            onClick={() => {
+              handleDelete(row.categoryId);
+            }}
+            style={{
+              width: 50,
+              height: 50,
+            }}
+          >
+            {" "}
+            <i class="bi bi-trash3-fill"></i>{" "}
+          </Button>
+          <Button
+            style={{
+              width: 50,
+              height: 50,
+            }}
+          >
+            <i class="bi bi-file-earmark-plus-fill"></i>
+          </Button>
+        </div>
+      ),
+    },
+  ];
+
 
   return (
     <div>
@@ -140,9 +228,7 @@ function DataTableTask() {
         />
         <button type="submit">Add</button>
       </Form>
-      <DataTable columns={column}
-       data={datas} 
-        />
+      <DataTable columns={column} data={datas} customStyles={customStyles} />
     </div>
   );
 }
