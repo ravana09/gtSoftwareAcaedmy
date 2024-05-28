@@ -3,6 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import NewAccount from "./newAccount";
 
 function facebook() {
+  function signUp(){
+    
+  }
   return (
     <>
     <Container>

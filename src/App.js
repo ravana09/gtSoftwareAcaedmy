@@ -129,6 +129,8 @@ import CookiesButton from "./practice/Task/Cookies/CookiesButton";
 import SingleStateCookie from "./practice/Task/Cookies/SingleStateCookie";
 import Erroehandling from "./Components/Erroehandling";
 import TryCatchTask from "./practice/Task/Error/TryCatchTask";
+import DataTableExample from "./Components/DataTableExample";
+import DataTableTask from "./practice/Task/DataTable/DataTableTask";
 
 
 function App() {
@@ -266,6 +268,8 @@ function App() {
           <Route path="/SingleStateCookie" element={<SingleStateCookie/>} />
           <Route path="/Errorhandling" element={<Erroehandling/>} />
           <Route path="/TryCatchTask" element={<TryCatchTask/>} />
+          
+          <Route path="/DataTableTask" element={<DataTableTask/>} />
 
           
           

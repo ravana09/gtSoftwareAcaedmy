@@ -7,9 +7,8 @@ function TryCatchTask() {
     Divisible: "",
   });
 
-
-
   let [result, setResult] = useState();
+  let [result2,setResult2]=useState()
 
   function handleChanges(e) {
     setData({ ...data, [e.target.name]: e.target.value });
@@ -17,16 +16,16 @@ function TryCatchTask() {
 
   function handleClick() {
     try {
-      if (isNaN(data.Numbers || data.Divisible)) {
-        throw new Error("Please enter a valid number");
+      if (isNaN(data.Numbers)) {
+        throw new Error("Please enter a valid number 1");
+      }
 
-      } 
-      
-      else if (parseInt (data.Divisible) === 0) {
+
+      if (isNaN(data.Divisible)) {
+        throw new Error("Please enter a valid number 2");
+      } else if (parseInt(data.Divisible) === 0) {
         throw new Error("A number Divisible by Zero is not Alloweded");
-      } 
-      
-      else {
+      } else {
         let Fianlans = data.Numbers / data.Divisible;
         Swal.fire({
           position: "top-end",
@@ -35,21 +34,21 @@ function TryCatchTask() {
           showConfirmButton: false,
           timer: 1000,
         });
-        setTimeout(()=>{
-            setResult(Fianlans);
-        },1000)
-       
+        setTimeout(() => {
+          setResult(Fianlans);
+        }, 1000);
       }
     } catch (err) {
       Swal.fire({
         position: "top-end",
         icon: "error",
-        title:  err.message ,
+        title: err.message,
         showConfirmButton: false,
         timer: 1000,
       });
 
-      setResult("Error Occured"+ err.message);
+      setResult("Error Occured" + err.message);
+      setResult2(err.message)
     }
   }
 
@@ -57,11 +56,12 @@ function TryCatchTask() {
     <div>
       <h1>Try Catch Task</h1>
 
-      <input type="text" onChange={handleChanges} name="Numbers"  />
+      <input type="text" onChange={handleChanges} name="Numbers" />
       <input type="text" onChange={handleChanges} name="Divisible" />
       <button onClick={handleClick}>Calculate</button>
-     <div className="text-warning">
-      <h2>{result}</h2>
+      <div className="text-warning">
+        <h2>{result}</h2>
+        <h2>{result2}</h2>
       </div>
     </div>
   );
