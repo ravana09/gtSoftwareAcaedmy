@@ -28,7 +28,7 @@ function DataTableTask() {
     } catch (err) {
       console.log(err.message);
     }
-  }, []);
+  }, [datas]);
 
   const customStyles = {
     rows: {
@@ -63,6 +63,7 @@ function DataTableTask() {
       },
       buttonsStyling: false,
     });
+    
     swalWithBootstrapButtons
       .fire({
         title: "Are you sure?",
@@ -75,7 +76,7 @@ function DataTableTask() {
       })
       .then((result) => {
         if (result.isConfirmed) {
-          const { value: text } = Swal.fire({
+          Swal.fire({
             input: "textarea",
             inputLabel: "Message",
             inputPlaceholder: "Type your message here...",
@@ -83,42 +84,60 @@ function DataTableTask() {
               "aria-label": "Type your message here",
             },
             showCancelButton: true,
+          }).then((textareaResult) => {
+            if (textareaResult.isConfirmed) {
+              let deletedItems = {
+                categoryId: id,
+                removedRemarks: textareaResult.value,
+              };
+              
+              axios
+                .post("http://catodotest.elevadosoftwares.com/Category/RemoveCategory", deletedItems)
+                .then((res) => {
+                  if (res.status === 200) {
+                    const Toast = Swal.mixin({
+                      toast: true,
+                      position: "top-end",
+                      showConfirmButton: false,
+                      timer: 3000,
+                      timerProgressBar: true,
+                      didOpen: (toast) => {
+                        toast.onmouseenter = Swal.stopTimer;
+                        toast.onmouseleave = Swal.resumeTimer;
+                      },
+                    });
+                    Toast.fire({
+                      icon: "success",
+                      title: "Deleted successfully",
+                    });
+                  } else {
+                    throw new Error("Failed to delete: " + res);
+                  }
+                })
+                .catch((err) => {
+                  console.log(err);
+                  Swal.fire({
+                    position: "top-end",
+                    icon: "error",
+                    title: "Failed to delete data",
+                    showConfirmButton: false,
+                    timer: 1500,
+                  });
+                });
+            }
           });
-          let deletedItems = {
-            categoryId: id,
-            removedRemarks: text,
-          };
-
-          console.log(deletedItems)
-          try {
-
-            
-            axios.post(
-              'http://catodotest.elevadosoftwares.com/Category/RemoveCategory',
-              deletedItems
-            )
-            throw new Error("it is not deleted ");
-          } catch (err) {
-            console.log(err);
-          }
-
-          if (text) {
-            Swal.fire(text);
-          }
-        } else if (
-          /* Read more about handling dismissals below */
-          result.dismiss === Swal.DismissReason.cancel
-        ) {
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
           swalWithBootstrapButtons.fire({
             title: "Cancelled",
-            text: "Your file has been not Deleted",
+            text: "Your file has not been deleted",
             icon: "error",
           });
         }
       });
   }
-//added
   
+  //added
+
   let addedata = {
     categoryId: 0,
     category: formdata.category,
@@ -136,21 +155,33 @@ function DataTableTask() {
     }).then((result) => {
       if (result.isConfirmed) {
         try {
-          axios.post(
-            "http://catodotest.elevadosoftwares.com/Category/InsertCategory",
-            addedata
-          );
-          throw new Error("Date has been not posted").then((res) =>
-            Swal.fire({
-              position: "top-end",
-              icon: "success",
-              title: "Your Data has been Added",
-              showConfirmButton: false,
-              timer: 1500,
-            })
-          );
+          axios
+            .post(
+              "http://catodotest.elevadosoftwares.com/Category/InsertCategory",
+              addedata
+            )
+            .then((res) => {
+              if (res.status === 200) {
+                Swal.fire({
+                  position: "top-end",
+                  icon: "success",
+                  title: "Your Data has been Added",
+                  showConfirmButton: false,
+                  timer: 1500,
+                });
+              } else {
+                throw new Error("Error:Date has been not posted");
+              }
+            });
         } catch (err) {
           console.log(err.message);
+          Swal.fire({
+            position: "top-end",
+            icon: "error",
+            title: "Failed to add data",
+            showConfirmButton: false,
+            timer: 1500,
+          });
         }
       } else if (result.isDenied) {
         Swal.fire({
@@ -208,7 +239,6 @@ function DataTableTask() {
       ),
     },
   ];
-
 
   return (
     <div>
